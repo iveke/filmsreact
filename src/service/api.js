@@ -15,13 +15,10 @@ const options = {
   },
 };
 
-export async function getFilm() {
+export async function getFilm(setMostPopularFilm) {
   fetch("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1", options)
     .then((response) => response.json())
-    .then((res) => {
-      console.log(res);
-      return res.results;
-    });
+    .then((res) => setMostPopularFilm(res.results));
 }
 
 export async function getGenres(setGenresList) {

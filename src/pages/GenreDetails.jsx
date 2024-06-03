@@ -16,8 +16,8 @@ function GenreDetails() {
     <>
       <List>
           {genreFilmsList.map((elem)=>{
-        const {id, overview, title, poster_path,release_date, popularity, original_language} = elem;
-        return <Card id={id} releaseDate={release_date} title={title} popularity={popularity} leng={original_language} imgPath={poster_path}/>
+        const {id,title, poster_path,release_date, vote_average, original_language} = elem;
+        return <Card id={id} releaseDate={release_date} title={title} rate={vote_average} leng={original_language} imgPath={poster_path}/>
     })}
       </List>
     </>

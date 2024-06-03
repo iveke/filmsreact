@@ -11,7 +11,7 @@
 
 import { Img, Item } from "./GenreCards.style"
 
-export const Card = ({id, releaseDate, title, imgPath, leng, popularity})=>{
+export const Card = ({id, releaseDate, title, imgPath, leng, rate})=>{
 return <>
 <Item key={id}>
     <div>
@@ -20,7 +20,7 @@ return <>
     <div>
         <h3>{title}</h3>
         <p>{releaseDate}</p>
-        <p>popularity:{popularity}</p>
+        <p>rate:{rate}</p>
         <p>original language:{leng}</p>
     </div>
 </Item>

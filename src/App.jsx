@@ -11,14 +11,13 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />} >
-        <Route index element={<Home />} />
-        <Route path="genres" element={<Genres />} />
-        <Route path="genres/:id" element={<GenreDetails/>}/>
-        <Route path="films/:id"/>
-        <Route path="*" element={<div>404 not found</div>} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="genres" element={<Genres />} />
+          <Route path="genres/:id" element={<GenreDetails />} />
+          <Route path="films:id" />
+          <Route path="*" element={<div>404 not found</div>} />
         </Route>
-        
       </Routes>
     </>
   );
