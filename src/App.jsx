@@ -6,7 +6,7 @@ import Genres from "./pages/Genres";
 import GenreDetails from "./pages/GenreDetails";
 
 function App() {
-  getFilm();
+
 
   return (
     <>

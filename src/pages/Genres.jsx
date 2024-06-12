@@ -13,17 +13,23 @@ const List = styled.ul`
 function Genres() {
   const [genres, setGenres] = useState([]);
   useEffect(() => {
-    getGenres(setGenres);
+    const wrapFnGenres = async () => {
+      const genresList = await getGenres();
+      setGenres(genresList);
+    };
+    wrapFnGenres()
   }, []);
-
-  getGenresId();
+  getGenresId(28);
 
   return (
     <>
       <List>
-        {genres.map((elem) => (
-          <Link to={elem.id}>{elem.name}{elem.id}</Link>
-        ))}
+        {genres.map((elem) => 
+          {console.log(elem);
+            return <Link key={elem.id} to={`${elem.id}`}>
+            {elem.name} hell {elem.id}
+          </Link>}
+        )}
       </List>
     </>
   );
