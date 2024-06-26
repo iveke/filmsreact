@@ -19,13 +19,12 @@ function Genres() {
     };
     wrapFnGenres()
   }, []);
-  getGenresId(28);
 
   return (
     <>
       <List>
         {genres.map((elem) => 
-          {console.log(elem);
+          {
             return <Link key={elem.id} to={`${elem.id}`}>
             {elem.name} hell {elem.id}
           </Link>}

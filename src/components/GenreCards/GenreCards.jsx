@@ -9,16 +9,17 @@
 //     </>
 // }
 
+import { Link, NavLink } from "react-router-dom"
 import { Img, Item } from "./GenreCards.style"
 
 export const Card = ({id, releaseDate, title, imgPath, leng, rate})=>{
 return <>
-<Item key={id}>
+<Item key={id} >
     <div>
         <Img src={`https://image.tmdb.org/t/p/w500${imgPath}`} alt={title} />
     </div>
     <div>
-        <h3>{title}</h3>
+        <NavLink to={`/films/${id}`}>{title}</NavLink>
         <p>{releaseDate}</p>
         <p>rate:{rate}</p>
         <p>original language:{leng}</p>

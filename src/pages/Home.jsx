@@ -22,19 +22,7 @@ console.log(mostPopularFilm[0]);
       <div>Here should be Swiper or Slider :|{/* <Slider slides={}/> */}</div>
       <h2>The most popular Film</h2>
       {mostPopularFilm.length > 0 && <MostPopularFilm data={mostPopularFilm[0]}/>}
-      {/* <MostPopulrFilm id={id}>
-        <div>
-          <Img
-            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-            alt={title}
-          />
-        </div>
-        <div>
-          <p>release: {release_data}</p>
-          <p>rate: {vote_count}</p>
-          <p>{overview}</p>
-        </div>
-      </MostPopulrFilm> */}
+      
     </>
   );
 }

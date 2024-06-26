@@ -28,6 +28,7 @@ function GenreDetails() {
           } = elem;
           return (
             <Card
+              key={id}
               id={id}
               releaseDate={release_date}
               title={title}

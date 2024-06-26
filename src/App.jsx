@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Layout from "./components/Layout/Layout";
 import Genres from "./pages/Genres";
 import GenreDetails from "./pages/GenreDetails";
+import FilmDetails from "./pages/FilmDetails";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="genres" element={<Genres />} />
           <Route path="genres/:id" element={<GenreDetails />} />
-          <Route path="films:id" />
+          <Route path="films/:id" element={<FilmDetails />} />
           <Route path="*" element={<div>404 not found</div>} />
         </Route>
       </Routes>
